@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix,classification_report, accuracy_score
@@ -21,8 +22,8 @@ SVM_model.fit(X_train,y_train)
 prediction = SVM_model.predict(X_test)
 
 """Comparing"""
-# print(y_test.head(15))
-# print(prediction)
+print(y_test.head(15))
+print(prediction)
 
 """Accuracy"""
 print("Model's accuracy is: ", accuracy_score(y_test,prediction)*100)
